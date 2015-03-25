@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solar System</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="https://www.polymer-project.org/0.5/components/webcomponentsjs/webcomponents.js"></script>
+    <script src="components/js/jquery.min.js"></script>
+    <script src="components/js/three.js"></script>
+    <script src="components/js/PointLight.js"></script>
+	<script src="components/js/TrackballControls.js"></script>
+    <script src="components/js/threex.planets/threex.planets.js"></script>
+    <script src="components/js/threex.planets/threex.atmospherematerial.js"></script>
+	<script src="components/js/threex.domevents.js"></script>
+	<script src="components/js/tween.min.js"></script>
+    <script src="components/js/solar_system.js"></script>
+    <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-elements/paper-elements.html">
+	<link rel="import" href="https://www.polymer-project.org/0.5/components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="https://www.polymer-project.org/0.5/components/paper-dialog/paper-action-dialog.html">
+	<link rel="import" href="https://www.polymer-project.org/0.5/components/paper-slider/paper-slider.html">
+	<link rel="import" href="https://www.polymer-project.org/0.5/components/paper-toggle-button/paper-toggle-button.html">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="components/css/main.css">
+    <link rel="stylesheet" href="components/css/solar.css">
+	<script>
+	</script>
+</head>
+
+<body>
+	<paper-action-dialog id="welcoming" backdrop autoCloseDisabled layered="false" heading="Добро пожаловать">
+		<p>
+			Для управления используйте мышь или тачскрин. Планеты расположены несколько ближе друг к другу, чем в реальности, чтобы сделать простанство модели более компактным. Приятного использования! 
+		</p>
+	<paper-button affirmative autofocus>Закрыть</paper-button>
+	</paper-action-dialog>
+	<paper-action-dialog id="planetInfo" backdrop autoCloseDisabled layered="false" heading="Планета" class="scrolling">
+		<div id="planetInfoContent">
+		
+		</div>
+		<paper-button affirmative autofocus id="closeInfo">Закрыть</paper-button>
+	</paper-action-dialog>
+    <audio src="components/sounds/main_theme.mp3" id="ambientSound" autoplay loop></audio>
+    <div id="three-container"></div>
+	<paper-button id="back"><img src="components/images/ui/keyboard-backspace.png">НАЗАД</paper-button>
+	<div id="allControls">
+		<div id="timeHolder">
+			<div id="theader">
+				<span class="title">ДАТА</span>
+				<div id="toggleDate" class="transition"><img src="components/images/ui/arrow_down.png" width="16" height="16"></div>
+			</div>
+			<div id="date">
+				<span id="year">2015</span>.
+				<span id="month">03</span>.
+				<span id="day">23</span>
+			</div>
+    	</div>
+		
+		<div id="settingsContainer">
+			<div id="sheader">
+				<span class="title">НАСТРОЙКИ</span>
+				<div id="toggleSettings" class="transition"><img src="components/images/ui/arrow_down.png" width="16" height="16"></div>
+			</div>
+			<ul id="settingsMenu">
+				<li>Громкость музыки
+					<paper-slider id="soundVolume" value="50"></paper-slider>
+				</li>
+				<li>Скорости движения
+					<paper-slider id="movementVelocity" value="1"></paper-slider>
+				</li>
+				<li id="rdinc">Увеличичть радиус
+					<paper-toggle-button id="incRad"></paper-toggle-button>
+				</li>
+				<li>Орбиты планет
+					<paper-toggle-button id="toggleOrbits" checked></paper-toggle-button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="goToSun"><paper-button autofocus>ВЕРНУТЬСЯ К СОЛНЦУ</paper-button></div>
+	<div id="copy">With <img src="components/images/heart.png" width="16" height="16"> by <a href="http://vk.com/exymax" target="_blank">exymax</a></div>
+    </core-drawer-panel>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+html,
+body {
+    -webkit-user-select:none;
+    height: 100%;
+    margin: 0;
+    background: #E5E5E5;
+    font-family: "Roboto", sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+canvas {
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.close-dialog {
+    color:#1abc9c;
+}
+            
+.tb {
+    background-color: #4285f4;
+}
+            
+.tb paper-icon-button,
+.tb .ttl {
+    color: #fff;
+}
+
+core-drawer-panel:not([narrow]) #toggleDrawer {
+    display:none;
+}
+
+core-header-panel[drawer] {
+    background:#fff;
+}
+
+#terminology {
+    display:block;
+}
+
+#calculation {
+    display:none;
+}
+
+.card {
+    display:block;
+    margin:20px;
+    border-radius:3px;
+    background:#fff;
+    box-shadow:0 2px 2px rgb(180,180,180);
+}
+
+.card .title {
+    font-weight:bold;
+    font-size:19px;
+}
+
+.card .inner {
+    padding:14px 10px 10px 10px;
+    color:rgb(100,100,100);
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+}
+
+.card .inner .notations {
+    background:#306CCF;
+    display:none;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:3px;
+}
+
+.card .inner .notations paper-button {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.card .inner .title {
+    margin-top:12px; 
+    margin-bottom:14px;
+}
+
+.card img {
+    position:relative;
+    width:100%;
+    height:auto;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+
+.card .inner paper-fab {
+    float:right;
+    margin-right:10px;
+    position:relative;
+    top:-42px;
+}
+
+.card .inner .nt-list {
+    padding-left:0;
+    list-style:none;
+}
+
+.card .inner p {
+    font-size:16px;
+}
+
+.red {
+    background: #d23f31;
+}
+
+
+.green {
+    background: #34495e;
+}
+
+
+/* Calculation */
+
+#three-container {
+    width:100%;
+    height:100%;
+ 
+}
+
+.inner.white  {
+    height:280px;
+    position:relative;
+    background:#fff;
+    color:rgb(90,90,90);
+}
+
+.inner.white .title {
+    
+}
+
+#devLink {
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left:0;
+	text-decoration:none;
+	line-height:40px;
+	text-align:center;
+	color:#1abc9c;
+}
+
+#innerHidden {
+	display:none;
+}
+
+#wikiLink {
+	font-size:15px;
+	color:rgb(140,140,140);
+}
+
+#wikiLink a {
+	text-decoration:none;
+	color:#3498db;
+	border-bottom:1px dotted #3498db;
+}
+
+#go {
+	width:100%;
+	color: #1abc9c;
+}

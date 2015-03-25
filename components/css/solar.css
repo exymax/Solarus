@@ -1,0 +1,202 @@
+/*RESET*/
+html, body {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	overflow-y:none;
+}
+
+.pointer {
+	cursor:pointer;
+}
+
+#closeInfo, #welcoming > paper-button {
+	color: #1abc9c;
+}
+
+ul {
+	padding-left:0;
+	margin-top:8px;
+}
+/**/
+
+#planetInfoContent {
+	text-indent:15px;
+	font-size:18px;
+}
+
+#planetInfoContent p {
+	margin: 7px 0 7px 0;
+}
+
+#back {
+	position:absolute;
+	top:10px;
+	left:10px;
+	color:#fff;
+}
+
+#back img {
+	margin-right:5px;
+}
+
+#allControls {
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:215px;
+	height:auto;
+}
+
+#toggleSettings {
+	cursor:pointer;
+	padding:10px;
+	float:right;
+	width:15px;
+	height:15px;
+}
+
+#settingsContainer {
+	width:100%;
+	height:auto;
+	border-radius:3px;
+	background:#fff;
+}
+
+#sheader {
+	width:100%;
+	height:40px;
+	background:rgb(240,240,240);
+	border-top:1px solid rgb(230,230,230);
+}
+
+#settingsMenu {
+	display:none;
+	list-style:none;
+	padding-bottom:10px;
+	color:rgb(130,130,130);
+}
+
+#settingsMenu li {
+	padding:10px 10px 0 10px;
+	border-bottom:1px solid rgb(200,200,200);
+}
+
+#settingsMenu > li:first-child {
+	padding-top:2px;
+}
+
+#settingsMenu > li:last-child {
+	border-bottom:none;
+	padding-bottom:2px;
+}
+
+#settingsMenu li paper-slider {
+	/*float:left;*/
+	width:115%;
+	margin-left: -15px;
+}
+
+#rdinc {
+	padding-bottom:20px;
+} 
+
+#settingsMenu li paper-toggle-button  {
+	float:right;
+	margin-top:5px;
+}
+
+#fade {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:#000;
+}
+
+#timeHolder {
+	width:100%;
+	height:auto;
+	background:#fff;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	box-shadow:0 1px 0 rgb(240,240,240);
+}
+
+#theader {
+	width:100%;
+	height:40px;
+	background:rgb(240,240,240);
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.title {
+	padding:10px;
+	float:left;
+}
+
+#toggleDate {
+	cursor:pointer;
+	padding:10px;
+	float:right;
+	width:15px;
+	height:15px;
+}
+
+#date {
+	display:none;
+	width:100%;
+	color:rgb(110,110,110);
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+}
+
+#date span {
+	line-height:45px;
+}
+
+#goToSun {
+	display:none;
+	position:absolute;
+	left:0;
+	bottom:20%;
+	width:100%;
+	line-height:40px;
+	text-align:center;
+}
+
+#goToSun paper-button {
+	color:#fff;
+}
+
+#copy {
+	position:absolute;
+	width:100%;
+	line-height:20px;
+	bottom:10px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+}
+
+#copy img {
+	transform:translateY(2px);
+}
+
+#copy a {
+	color: #1abc9c;
+	text-decoration:none;
+	border-bottom: 1px dashed #1abc9c;
+}
+
+.transition {
+	-webkit-transition: all 0.5s ease;
+}
+
+.anim-rot-180 {
+	transform:rotate(180deg);
+}

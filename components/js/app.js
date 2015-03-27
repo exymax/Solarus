@@ -25,7 +25,7 @@ document.addEventListener("polymer-ready", function () {
         
         $(".card .inner").on("click", ".card-fab-hide", function() {
             $(this).removeAttr("icon").attr("icon", "unfold-more").removeAttr("title").attr("title", "Раскрыть").removeClass("card-fab-hide").addClass("card-fab-show"); 
-            $("#innerHidden").slideDown();
+            $("#innerHidden").slideUp();
         });
         
         $("#go").click(function() {

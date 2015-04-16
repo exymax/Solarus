@@ -236,7 +236,8 @@ document.addEventListener("polymer-ready", function() {
 			var moon = THREEx.Planets.createMoon();
 			moon.castsShadow = true;
 			phantom.add(moon);
-			moon.position.x-=10;
+			moon.position.x-=11;
+			moon.scale.set(0.85,0.85,0.85);
 	
 			planetObj["mars"] = THREEx.Planets.createMars();
 			planetObj["mars"].position.x -= THREEx.PlanetData.mars.Distance;

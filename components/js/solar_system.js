@@ -3,8 +3,8 @@ document.addEventListener("polymer-ready", function() {
 			var planetObj = {};
 	
 			var Solar = {
-				particleCount: 5000,
-				particleSize: 11,
+				particleCount: 4500,
+				particleSize: 10,
 				galaxyVelocity: 0.002*THREEx.VF,
 				asteroidsVelocity: 0.002*THREE.VF,
 				firstLaunch: true, 

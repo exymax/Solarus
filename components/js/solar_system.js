@@ -616,7 +616,8 @@ document.addEventListener("polymer-ready", function() {
 							planetInfo.setAttribute("heading", THREEx.PlanetData[Solar.lookFrom].Name);
 						});
 						closeInfo.click(function() {
-							goToSun.fadeIn();
+							if(event.target.objName!="sun")
+								goToSun.fadeIn();
 						});
 					}, 1100);
 				}, false);	
@@ -628,7 +629,8 @@ document.addEventListener("polymer-ready", function() {
 			});
 	
 			function setDefaultCameraPosition() {
-				Solar.lookFrom = "sun";
+				if(event.target.objName!="sun")
+					Solar.lookFrom = "sun";
 				var tween = new TWEEN.Tween(camera.position).to({
 						x: Solar.cameraPosition.x,
 						y: Solar.cameraPosition.y,

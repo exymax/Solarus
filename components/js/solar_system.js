@@ -1,4 +1,4 @@
-document.addEventListener("polymer-ready", function() {
+document.addEventListener("DOMContentLoaded", function() {
 	
 			var planetObj = {};
 	
@@ -117,7 +117,7 @@ document.addEventListener("polymer-ready", function() {
 				toggleDateBlock();
 			});
 	
-			soundVolume.on("immediate-value-change", function() {
+			/*soundVolume.on("immediate-value-change", function() {
 				console.log(parseInt($(this).attr("aria-valuenow"), 10)/100);
 				ambSound.volume = parseInt($(this).attr("aria-valuenow"), 10)/100;
 			});
@@ -161,7 +161,7 @@ document.addEventListener("polymer-ready", function() {
 						Solar.toggleTracksVisible(true);
 					}
 				}
-			});
+			});*/
 
     		var scene = new THREE.Scene();
 			camera = new THREE.PerspectiveCamera( 45, W/H, 2.5, 60000 );

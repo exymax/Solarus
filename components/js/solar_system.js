@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.log(window.localStorage["showedFirstTime"]);
 	
 			if(!sft) {
-				welcoming.toggle();
+				welcoming.close();
 				window.localStorage["showedFirstTime"] =  "true";
 			}
 			else welcoming.remove();

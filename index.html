@@ -4,7 +4,6 @@
 <head>
     <title>Solar System</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.js"></script>
     <script src="components/js/jquery.min.js"></script>
     <script src="components/js/three.js"></script>
     <script src="components/js/PointLight.js"></script>
@@ -14,32 +13,51 @@
 	<script src="components/js/threex.domevents.js"></script>
 	<script src="components/js/tween.min.js"></script>
     <script src="components/js/solar_system.js"></script>
-    <link rel="import" href="components/bower_components/polymer/polymer.html">
-	<link rel="import" href="components/bower_components/paper-dialog/paper-dialog.html">
-    <link rel="import" href="components/bower_components/paper-dialog/paper-action-dialog.html">
-	<link rel="import" href="components/bower_components/paper-slider/paper-slider.html">
-	<link rel="import" href="components/bower_components/paper-toggle-button/paper-toggle-button.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="components/css/main.css">
     <link rel="stylesheet" href="components/css/solar.css">
 </head>
 
 <body>
-	<paper-action-dialog id="welcoming" backdrop autoCloseDisabled layered="false" heading="Добро пожаловать">
+	 <dialog id="welcoming" class="mdl-dialog">
+	    <div class="mdl-dialog__content">
+	      <p>
+	        Для управления используйте мышь или тачскрин. Планеты расположены несколько ближе друг к другу, чем в реальности, чтобы сделать простанство модели более компактным. Приятного использования! 
+	      </p>
+	    </div>
+	    <div class="mdl-dialog__actions">
+	      <button type="button" class="mdl-button close">Закрыть</button>
+	    </div>
+	  </dialog>
+	<!--<paper-action-dialog id="welcoming" backdrop autoCloseDisabled layered="false" heading="Добро пожаловать">
 		<p>
 			Для управления используйте мышь или тачскрин. Планеты расположены несколько ближе друг к другу, чем в реальности, чтобы сделать простанство модели более компактным. Приятного использования! 
 		</p>
-	<paper-button affirmative autofocus>Закрыть</paper-button>
-	</paper-action-dialog>
-	<paper-action-dialog id="planetInfo" backdrop autoCloseDisabled layered="false" heading="Планета" class="scrolling">
+		<paper-button affirmative autofocus>Закрыть</paper-button>
+	</paper-action-dialog>-->
+	 <dialog class="mdl-dialog" id="planetInfo">
+	    <h4 class="mdl-dialog__title">Планета</h4>
+	    <div class="mdl-dialog__content">
+	      <p id="planetInfoContent">
+	        
+	      </p>
+	    </div>
+	    <div class="mdl-dialog__actions">
+	      <button type="button" id="closeInfo" class="mdl-button close">Disagree</button>
+	    </div>
+	  </dialog>
+	<!--<paper-action-dialog id="planetInfo" backdrop autoCloseDisabled layered="false" heading="Планета" class="scrolling">
 		<div id="planetInfoContent">
 		
 		</div>
 		<paper-button affirmative autofocus id="closeInfo">Закрыть</paper-button>
-	</paper-action-dialog>
+	</paper-action-dialog>-->
     <audio src="components/sounds/main_theme.mp3" id="ambientSound" autoplay loop></audio>
     <div id="three-container"></div>
-	<paper-button id="back"><img src="components/images/ui/keyboard-backspace.png">НАЗАД</paper-button>
+	<button id="back" class="mdl-button mdl-js-button"><img src="components/images/ui/keyboard-backspace.png">НАЗАД</paper-button>
 	<div id="allControls">
 		<div id="timeHolder">
 			<div id="theader">
@@ -60,16 +78,18 @@
 			</div>
 			<ul id="settingsMenu">
 				<li>Громкость музыки
-					<paper-slider id="soundVolume" value="50"></paper-slider>
+					<input id="soundVolume" class="mdl-slider mdl-js-slider" type="range"
+  min="0" max="100" value="0" tabindex="0">
 				</li>
 				<li>Скорости движения
-					<paper-slider id="movementVelocity" value="1"></paper-slider>
+					<input id="movementVelocity" class="mdl-slider mdl-js-slider" type="range"
+  min="0" max="100" value="0" tabindex="0">
 				</li>
 				<li id="rdinc">Увеличичть радиус
-					<paper-toggle-button id="incRad"></paper-toggle-button>
+					<input type="checkbox" id="switch-1" id="incRad" class="mdl-switch__input" checked>
 				</li>
 				<li>Орбиты планет
-					<paper-toggle-button id="toggleOrbits" checked></paper-toggle-button>
+					<input type="checkbox" id="switch-1" id="toggleOrbits" class="mdl-switch__input" checked>
 				</li>
 			</ul>
 		</div>

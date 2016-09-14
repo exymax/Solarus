@@ -195,11 +195,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			var sft = window.localStorage["showedFirstTime"];
 			console.log(window.localStorage["showedFirstTime"]);
 	
-			if(!sft) {
+			/*if(!sft) {
 				document.getElementById("welcoming").close();
 				window.localStorage["showedFirstTime"] =  "true";
 			}
-			else welcoming.remove();
+			else welcoming.remove();*/
 
 			var starField = THREEx.Planets.createStarfield();
 			starField.rotation.z += Math.PI/2;

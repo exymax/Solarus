@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 			// Настройки
 	
-			function toggleDateBlock() {
+			/*function toggleDateBlock() {
 				if(toggleDate.hasClass("clicked")) {
 					toggleDate.removeClass("clicked").removeClass("anim-rot-180");
 					dateHolder.slideUp();
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				toggleDateBlock();
 			});
 	
-			/*soundVolume.on("immediate-value-change", function() {
+			soundVolume.on("immediate-value-change", function() {
 				console.log(parseInt($(this).attr("aria-valuenow"), 10)/100);
 				ambSound.volume = parseInt($(this).attr("aria-valuenow"), 10)/100;
 			});
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.log(window.localStorage["showedFirstTime"]);
 	
 			if(!sft) {
-				welcoming.close();
+				document.getElementById("welcoming").close();
 				window.localStorage["showedFirstTime"] =  "true";
 			}
 			else welcoming.remove();
